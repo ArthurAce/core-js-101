@@ -20,7 +20,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-  return width * height
+  return width * height;
 }
 
 
@@ -36,7 +36,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCircleCircumference(radius) {
-  2 * Math.PI * radius
+  2 * Math.PI * radius;
 }
 
 /**
@@ -52,7 +52,7 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return (value1 + value2) / 2
+  return (value1 + value2) / 2;
 }
 
 
@@ -72,7 +72,7 @@ function getAverage(value1, value2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-  return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+  return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 }
 
 
@@ -89,7 +89,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-  return -b / a
+  return -b / a;
 }
 
 /**
@@ -111,7 +111,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  return
+
 }
 
 /**
@@ -127,7 +127,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-  return Math.abs(value) % 10
+  return Math.abs(value) % 10;
 }
 
 
@@ -143,7 +143,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-  return parseFloat(value)
+  return parseFloat(value);
 }
 
 /**
@@ -160,7 +160,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelepipedDiagonal(a, b, c) {
-  return Math.sqrt(a ** 2 + b ** 2 + c ** 2)
+  return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
 
 /**
@@ -181,7 +181,7 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-  return Math.round(num / 10  ** pow) * 10  ** pow
+  return Math.round(num / 10 ** pow) * 10 ** pow;
 }
 
 /**
@@ -202,13 +202,13 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-  if (n <= 1) return false
-  if (n === 2) return true
+  if (n <= 1) return false;
+  if (n === 2) return true;
   if (n % 2 === 0) return false;
   for (let i = 3; i <= Math.sqrt(n); i += 2) {
-    if (n % i === 0) return false
+    if (n % i === 0) return false;
   }
-  return true
+  return true;
 }
 
 
@@ -228,10 +228,10 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-  let number = Number(value)
+  const number = Number(value);
   if (!isNaN(number)) {
-    return number
-  } return def
+    return number;
+  } return def;
 }
 
 

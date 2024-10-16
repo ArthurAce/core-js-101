@@ -37,11 +37,11 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-  const arr = []
+  const arr = [];
   for (let i = 1; i <= len * 2; i += 2) {
-    arr.push(i)
+    arr.push(i);
   }
-  return arr
+  return arr;
 }
 
 
@@ -58,10 +58,8 @@ function generateOdds(len) {
  *    [] => []
  */
 function doubleArray(arr) {
-  return arr.concat(arr)
+  return arr.concat(arr);
 }
-
-
 
 
 /**
@@ -76,13 +74,13 @@ function doubleArray(arr) {
  *    [] => []
  */
 function getArrayOfPositives(arr) {
-  let newArray = []
+  const newArray = [];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > 0) {
       newArray.push(arr[i]);
     }
   }
-  return newArray || []
+  return newArray || [];
 }
 
 /**
@@ -97,13 +95,13 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccoon' ] => [ 'cat', 'dog', 'raccoon' ]
  */
 function getArrayOfStrings(arr) {
-  let newArray = []
+  const newArray = [];
   for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[i] ==='string') {
-      newArray.push(arr[i])
+    if (typeof arr[i] === 'string') {
+      newArray.push(arr[i]);
     }
   }
-  return newArray || []
+  return newArray || [];
 }
 
 /**
@@ -120,7 +118,7 @@ function getArrayOfStrings(arr) {
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
 function removeFalsyValues(arr) {
-  return arr.filter(Boolean)
+  return arr.filter(Boolean);
 }
 
 /**
@@ -135,7 +133,7 @@ function removeFalsyValues(arr) {
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
 function getUpperCaseStrings(arr) {
-  return arr.map(str => str.toUpperCase());
+  return arr.map((str) => str.toUpperCase());
 }
 
 
@@ -150,7 +148,7 @@ function getUpperCaseStrings(arr) {
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
-  return arr.map(str => str.length)
+  return arr.map((str) => str.length);
 }
 /**
  * Inserts the item into specified array at specified index
@@ -164,8 +162,8 @@ function getStringsLength(arr) {
  *    [ 1, 'b', 'c'], 'x', 0  => [ 'x', 1, 'b', 'c' ]
  */
 function insertItem(arr, item, index) {
-  arr.splice(index, 0, item)
-  return arr
+  arr.splice(index, 0, item);
+  return arr;
 }
 
 /**
@@ -179,7 +177,7 @@ function insertItem(arr, item, index) {
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'a', 'b', 'c' ]
  */
 function getHead(arr, n) {
-  return arr.slice(0, n)
+  return arr.slice(0, n);
 }
 
 
@@ -194,9 +192,9 @@ function getHead(arr, n) {
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'b', 'c', 'd' ]
  */
 function getTail(arr, n) {
-  return arr.slice(-n)
+  return arr.slice(-n);
 }
-console.log(getTail([ 'a', 'b', 'c', 'd'], 3))
+console.log(getTail(['a', 'b', 'c', 'd'], 3));
 
 
 /**
@@ -222,7 +220,7 @@ console.log(getTail([ 'a', 'b', 'c', 'd'], 3))
 function toCsvText(arr) {
   let result = '';
   for (let i = 0; i < arr.length; i++) {
-    result += arr[i].join(',') + '\n';
+    result += `${arr[i].join(',')}\n`;
   }
   return result.trim();
 }
@@ -239,7 +237,7 @@ function toCsvText(arr) {
  *   [ 10, 100, -1 ]      => [ 100, 10000, 1 ]
  */
 function toArrayOfSquares(arr) {
-  return arr.map((num) => num * num)
+  return arr.map((num) => num * num);
 }
 
 /**
@@ -257,13 +255,13 @@ function toArrayOfSquares(arr) {
  *   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]
  */
 function getMovingSum(arr) {
-  let sum = 0
-  let result = []
+  let sum = 0;
+  const result = [];
   for (let i = 0; i < arr.length; i++) {
-    sum = sum + arr[i]
-    result.push(sum)
+    sum += arr[i];
+    result.push(sum);
   }
-  return result
+  return result;
 }
 
 /**
