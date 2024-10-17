@@ -36,7 +36,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCircleCircumference(radius) {
-  2 * Math.PI * radius;
+  return 2 * Math.PI * radius;
 }
 
 /**
@@ -110,7 +110,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (0,1)     => 0
  *   (0,1) (1,2)     => 0
  */
-function getAngleBetweenVectors(x1, y1, x2, y2) {
+function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
 
 }
 
@@ -228,10 +228,8 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-  const number = Number(value);
-  if (!isNaN(number)) {
-    return number;
-  } return def;
+  const number = +value;
+  return number || def;
 }
 
 
