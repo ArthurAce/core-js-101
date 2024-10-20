@@ -278,7 +278,6 @@ function getSecondItems(arr) {
   const result = arr.filter((item) => item % 2 === 0);
   return result;
 }
-
 /**
  * Propagates every item in sequence its position times
  * Returns an array that consists of: one first item, two second items, three third items etc.
