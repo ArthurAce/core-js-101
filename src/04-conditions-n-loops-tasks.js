@@ -29,14 +29,13 @@
  */
 function getFizzBuzz(num) {
   if (num % 3 === 0 && num % 5 === 0) {
-    return 'FizzBuzz'
-  }else if (num % 3 === 0) {
-    return 'Fizz'
-  } else if (num % 5 === 0) {
-    return'Buzz'
-  }  else {
-    return num
+    return 'FizzBuzz';
+  } if (num % 3 === 0) {
+    return 'Fizz';
+  } if (num % 5 === 0) {
+    return 'Buzz';
   }
+  return num;
 }
 
 /**
@@ -51,11 +50,11 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-  let result = 1
-  for (let i = 1; i <= n; i++) {
-    result *= i
+  let result = 1;
+  for (let i = 1; i <= n; i + 1) {
+    result *= i;
   }
-  return result
+  return result;
 }
 
 
@@ -72,11 +71,11 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-  let sum = 0
-  for (let i = n1; i <= n2; i++) {
-    sum += i
+  let sum = 0;
+  for (let i = n1; i <= n2; i + 1) {
+    sum += i;
   }
-  return sum
+  return sum;
 }
 
 
@@ -97,8 +96,8 @@ function getSumBetweenNumbers(n1, n2) {
  */
 function isTriangle(a, b, c) {
   if (a + b > c && a + c > b && b + c > a) {
-    return true
-  } return false
+    return true;
+  } return false;
 }
 
 /**
@@ -136,7 +135,6 @@ function isTriangle(a, b, c) {
 function doRectanglesOverlap(/* rect1, rect2 */) {
   throw new Error('Not implemented');
 }
-
 
 
 /**
